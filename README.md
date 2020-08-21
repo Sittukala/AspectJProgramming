@@ -10,4 +10,6 @@ Knowledge Gained:
   2. I have the basic understand of how to use the pointcuts and where and when the pointcut applies. Also, how the advice functioanlity works with the pointcut.
   3. Also, I have learnt here how to get the aggregate functions on a certain Set or List of values and to track them.
   
+  Note: Please refer to AspectJProgramming/AspectJ/gendev.hw2.ssa46/src/gendev/hw2/ for the basic aspectj tasks.
+  
   
