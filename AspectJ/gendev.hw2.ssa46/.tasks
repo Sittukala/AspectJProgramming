@@ -1,0 +1,4 @@
+Task1 [when=AFTER, pointcut=EXECUTION, methodName=toString, print=name]
+Task1 [when=AFTER, pointcut=write, fieldName=children]
+Task3 [when=AFTER, pointcut=EXECUTION, property=weight, aggregation=maximum]
+gendev.hw2.tasks.Task4@3527942a

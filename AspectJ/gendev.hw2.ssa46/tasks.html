@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Generative Development Assignment 2 for ssa46</title>
+<link href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'B612', sans-serif;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+</style>
+</head>
+<body>
+
+<h1>Personal Generative Development Assignment 2 for ssa46</h1>
+<p>This is your personalized assignment. See the general worksheet for more 
+information.</p>
+
+<h3>Task 1: Tracing [20 marks]</h3>
+
+<p>
+<em>After</em> any <em>execution</em> of 
+a method with name <code>toString</code> print (using 
+<code>System.out.println(...)</code> with an appropriate parameter) the
+<em>name</em> of the method for the current pointcut.
+</p>
+
+<p>
+<b>Location:</b>
+Implement this code in the existing Aspect <code>Task1.aj</code>. 
+</p>
+
+<p>
+<b>Marking:</b>
+<ul>
+<li>Correct primitive pointcut [5 marks]</li>
+<li>Correct pattern in primitive pointcut [5 marks]</li>
+<li>Correct advice time [5 marks]</li>
+<li>Correct advice functionality* [5 marks]</li>
+</ul>
+No marks awarded if advice does not compile.
+</p>
+   
+
+<h3>Task 2: Accessing Fields [20 marks]</h3>
+
+<p>
+Print the value of the field <code>children</code> 
+<em>after</em> any <em>write</em> 
+access (using <code>System.out.println(...)</code> with an appropriate parameter).
+</p>
+
+<p>
+<b>Location:</b>
+Implement this code in the existing Aspect <code>Task2.aj</code>. 
+</p>
+
+<p>
+<b>Hint:</b>
+It is possible to nest the pointcut <code>within</code> inside the pointcut 
+<code>cflow</code> to exclude all control flow that started in <code>Task2</code>.
+</p>
+
+
+<p>
+<b>Marking:</b>
+<ul>
+<li>Correct primitive pointcut [5 marks]</li>
+<li>Correct pattern in primitive pointcut [5 marks]</li>
+<li>Correct advice time [5 marks]</li>
+<li>Correct advice functionality* [5 marks]</li>
+</ul>
+No marks awarded if advice does not compile.
+</p>
+
+<h3>Task 3: Data Tracking [35 marks]</h3>
+<p>
+Determine the <em>maximum</em> of the <em>weight</em>
+values of features checked during the execution of the method 
+<code>FeatureModel.isProduct(..)</code> following the steps below.  
+<ol>
+<li>Create a field of type <code>Set</code> in your aspect to keep track of the collected numbers.</li>
+<li>Before the execution of method <code>FeatureModel.isProduct(..)</code> reset
+the collected data.</li>
+<li><em>After</em> any <em>execution</em> of method 
+<code>Feature.isProduct(..)</code> that is also inside the control flow of
+<code>FeatureModel.isProduct(..)</code>, track the 
+<em>weight</em> value of the target feature</li>
+<li>Calculate the <em>weight</em> value of the target feature using 
+method <code>InventorySystem.getWeight(..)</code> on the
+target feature</li>
+<li>After the execution of method <code>FeatureModel.isProduct(..)</code> print
+the <em>maximum</em> of all <em>weight</em> values tracked.</li>
+</ol>
+</p>
+
+
+<p>
+<b>Location:</b>
+Implement this code in the existing Aspect <code>Task3.aj</code>. 
+</p>
+
+<p>
+<b>Marking:</b>
+<ul>
+<li>Suitable field in aspect [4 marks]</li>
+<li>Correct pointcut for before <code>FeatureModel.isProduct(..)</code> [4 marks]</li>
+<li>Correct advice to initialize field* [4 marks]</li>
+<li>Correct pointcut for <code>Feature.isProduct(..)</code> [10 marks]</li>
+<li>Correct advice functionality to track <em>weight</em> values* [5 marks]</li>
+<li>Correct pointcut for after <code>FeatureModel.isProduct(..)</code> [4 marks]</li>
+<li>Correct advice functionality to print <em>maximum</em>* [4 marks]</li>
+</ul>
+No marks awarded if advice does not compile.
+</p>
+
+<h3>Task 4: Cross Tree Constraints [25 marks]</h3>
+<p>
+Implement an aspect to ensure that the following two cross tree constraints are
+satisfied when checking products using 
+<code>FeatureModel.isProduct(..)</code>. 
+<ul>
+<li>Player <em>requires</em> Weird</li>
+<li>Camper <em>excludes</em> Migration</li>
+</ul>
+In case the constraints are not satisfied the method should return 
+<code>false</code>, otherwise it should proceed as usual.
+</p>
+
+<p>
+<b>Hint:</b>
+The parameter of <code>isProduct</code> is a set of names of features. If it
+contains <em>player</em> it also needs to contain <em>weird</em>
+to satisfy the first constraint.
+</p>
+
+<p>
+<b>Location:</b>
+Implement this code in the existing Aspect <code>Task4.aj</code>. 
+</p>
+
+<p>
+<b>Marking:</b>
+<ul>
+<li>Correct primitive pointcut(s) [5 marks]</li>
+<li>Correct pattern(s) in primitive pointcut(s) [5 marks]</li>
+<li>Correct advice time [5 marks]</li>
+<li>Correct advice functionality* [10 marks]</li>
+</ul>
+No marks awarded if advice does not compile.
+</p>
+
+<hr>
+
+<p><b>Footnotes:</b><br>
+* Marks for correct functionality can only be awarded if all other parts are
+correct. 
+</p>
+
+</body>
+</html>
